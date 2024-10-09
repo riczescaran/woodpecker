@@ -7,97 +7,84 @@
 </p>
 <br/>
 <p align="center">
-  <a href="https://ci.woodpecker-ci.org/woodpecker-ci/woodpecker" title="Build Status">
-    <img src="https://ci.woodpecker-ci.org/api/badges/woodpecker-ci/woodpecker/status.svg">
+  <a href="https://ci.woodpecker-ci.org/repos/3780" title="Pipeline Status">
+    <img src="https://ci.woodpecker-ci.org/api/badges/3780/status.svg" alt="Pipeline Status">
   </a>
   <a href="https://codecov.io/gh/woodpecker-ci/woodpecker">
-    <img src="https://codecov.io/gh/woodpecker-ci/woodpecker/branch/main/graph/badge.svg"/>
+    <img src="https://codecov.io/gh/woodpecker-ci/woodpecker/branch/main/graph/badge.svg" alt="Code coverage">
   </a>
   <a href="https://translate.woodpecker-ci.org/engage/woodpecker-ci/">
     <img src="https://translate.woodpecker-ci.org/widgets/woodpecker-ci/-/ui/svg-badge.svg" alt="Translation status" />
   </a>
-  <a href="https://discord.gg/fcMQqSMXJy" title="Join the Discord chat at https://discord.gg/fcMQqSMXJy">
-    <img src="https://img.shields.io/discord/838698813463724034.svg?label=discord">
-  </a>
   <a href="https://matrix.to/#/#woodpecker:matrix.org" title="Join the Matrix space at https://matrix.to/#/#woodpecker:matrix.org">
-    <img src="https://img.shields.io/matrix/woodpecker:matrix.org?label=matrix">
+    <img src="https://img.shields.io/matrix/woodpecker:matrix.org?label=matrix" alt="Matrix space">
   </a>
-  <a href="https://goreportcard.com/report/github.com/woodpecker-ci/woodpecker" title="Go Report Card">
-    <img src="https://goreportcard.com/badge/github.com/woodpecker-ci/woodpecker">
+  <a href="https://goreportcard.com/report/go.woodpecker-ci.org/woodpecker/v2" title="Go Report Card">
+    <img src="https://goreportcard.com/badge/go.woodpecker-ci.org/woodpecker/v2" alt="Go Report Card">
   </a>
-  <a href="https://godoc.org/github.com/woodpecker-ci/woodpecker" title="GoDoc">
-    <img src="https://godoc.org/github.com/woodpecker-ci/woodpecker?status.svg">
+  <a href="https://pkg.go.dev/go.woodpecker-ci.org/woodpecker/v2" title="go reference">
+    <img src="https://pkg.go.dev/badge/go.woodpecker-ci.org/woodpecker/v2" alt="go reference">
   </a>
   <a href="https://github.com/woodpecker-ci/woodpecker/releases/latest" title="GitHub release">
-    <img src="https://img.shields.io/github/v/release/woodpecker-ci/woodpecker?sort=semver">
+    <img src="https://img.shields.io/github/v/release/woodpecker-ci/woodpecker?sort=semver" alt="GitHub release">
   </a>
   <a href="https://hub.docker.com/r/woodpeckerci/woodpecker-server" title="Docker pulls">
-    <img src="https://img.shields.io/docker/pulls/woodpeckerci/woodpecker-server">
+    <img src="https://img.shields.io/docker/pulls/woodpeckerci/woodpecker-server" alt="Docker pulls">
   </a>
   <a href="https://opensource.org/licenses/Apache-2.0" title="License: Apache-2.0">
-    <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg">
+    <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache-2.0">
   </a>
   <a href="https://bestpractices.coreinfrastructure.org/projects/5309">
-    <img src="https://bestpractices.coreinfrastructure.org/projects/5309/badge">
+    <img src="https://bestpractices.coreinfrastructure.org/projects/5309/badge" alt="OpenSSF best practices">
   </a>
-  <a href="https://www.tickgit.com/browse?repo=github.com/woodpecker-ci/woodpecker" title="TODOs">
-    <img src="https://badgen.net/https/api.tickgit.com/badgen/github.com/woodpecker-ci/woodpecker">
-  </a>
-  <a href="https://github.com/pre-commit/pre-commit" title="TODOs">
-    <img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit">
+  <a href="https://results.pre-commit.ci/repo/github/179344069" title="pre-commit.ci">
+    <img src="https://results.pre-commit.ci/badge/github/woodpecker-ci/woodpecker/main.svg" alt="pre-commit.ci">
   </a>
 </p>
 <br/>
 
-Woodpecker is a community fork of the Drone CI system.
+Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.
 
-![woodpecker](docs/docs/woodpecker.png)
+![woodpecker](docs/woodpecker.png)
 
-## 🫶 Support
+## Installation & Resources
 
-Please consider to donate and become a backer. 🙏 [[Become a backer](https://opencollective.com/woodpecker-ci#category-CONTRIBUTE)]
+Woodpecker can be installed in various ways (see the [Installation Instructions](https://woodpecker-ci.org/docs/administration/getting-started)) and runs with SQLite as database by default.
+It requires around 100 MB of RAM (Server) and 30 MB (Agent) at runtime in idle mode.
 
-<a href="https://opencollective.com/woodpecker-ci" target="_blank"><img src="https://opencollective.com/woodpecker-ci/backers.svg?width=890"></a>
+## Support
 
-## 📖 Documentation
+You can support the project by becoming a backer on [Open Collective](https://opencollective.com/woodpecker-ci#category-CONTRIBUTE) or via [GitHub Sponsors](https://github.com/sponsors/woodpecker-ci).
 
-<https://woodpecker-ci.org/>
+<a href="https://opencollective.com/woodpecker-ci" target="_blank"><img src="https://opencollective.com/woodpecker-ci/backers.svg?width=890" alt="Open Collective backers"></a>
 
-## ✨ Contribute
+## Documentation
 
-See [Contributing Guide](CONTRIBUTING.md)
+Our documentation can be found at <https://woodpecker-ci.org/docs/intro>.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://woodpecker-ci.org/docs/next/development/getting-started#gitpod)
+## Translation
 
-## 📣 Translate
+We have a self-hosted [Weblate](https://weblate.org/en/) instance at [translate.woodpecker-ci.org](https://translate.woodpecker-ci.org).
 
-We use an own [Weblate](https://weblate.org/en/) instance at [translate.woodpecker-ci.org](https://translate.woodpecker-ci.org).
+An overview of the current translation state is available at <https://translate.woodpecker-ci.org/projects/woodpecker-ci/#languages>.
 
-<a href="https://translate.woodpecker-ci.org/engage/woodpecker-ci/">
-  <img src="https://translate.woodpecker-ci.org/widgets/woodpecker-ci/-/ui/multi-blue.svg" alt="Translation status" />
-</a>
+## Public Woodpecker Instances
 
-## 👋 Who uses Woodpecker?
+Woodpecker is used as the main CI/CD engine at [Codeberg](https://codeberg.org), an alternative Git hosting platform with a focus on privacy and free software development.
 
-Woodpecker is used by [itself](https://ci.woodpecker-ci.org/woodpecker/woodpecker-ci/) multiple well-known companies, organizations like [Codeberg](https://codeberg.org), hobbyist and many others.
+## Plugins
 
-Leave a [comment](https://github.com/woodpecker-ci/woodpecker/discussions/2149) if you're using it as well.
+Woodpecker can be extended via plugins.
+The [plugin overview website](https://woodpecker-ci.org/plugins) helps browsing available plugins.
+It combines both plugins by the Woodpecker core team and community-maintained ones.
 
-Also consider using the topic `WoodpeckerCI` in your repository, so others can learn from your config and use the hashtag `#WoodpeckerCI` when talking about the project on social media!
+## Star History
 
-Here are some places where people mention Woodpecker:
-
-- [GitHub](https://github.com/topics/WoodpeckerCI)
-- [Codeberg](https://codeberg.org/explore/repos?q=woodpeckerci&topic=1)
-- [Twitter](https://twitter.com/search?q=%23WoodpeckerCI&src=typed_query)
-- [Fediverse](https://mastodon.social/tags/WoodpeckerCI)
-
-## ✨ Stars over time
-
-[![Stargazers over time](https://starchart.cc/woodpecker-ci/woodpecker.svg)](https://starchart.cc/woodpecker-ci/woodpecker)
+[![Star History Chart](https://api.star-history.com/svg?repos=woodpecker-ci/woodpecker&type=Date)](https://star-history.com/#woodpecker-ci/woodpecker&Date)
 
 ## License
 
-Woodpecker is Apache 2.0 licensed with the source files in this repository having a header indicating which license they are under and what copyrights apply.
+Woodpecker is Apache 2.0 licensed.
+The source files have a header indicating which license they are under and what copyrights apply.
 
-Files under the `docs/` folder are licensed under Creative Commons Attribution-ShareAlike 4.0 International Public License.
+Everything in `docs/` is licensed under the Creative Commons Attribution-ShareAlike 4.0 International Public License.

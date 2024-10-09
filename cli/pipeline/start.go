@@ -15,14 +15,14 @@
 package pipeline
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"strconv"
 
-	"github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v3"
 
-	"github.com/woodpecker-ci/woodpecker/cli/common"
-	"github.com/woodpecker-ci/woodpecker/cli/internal"
+	"go.woodpecker-ci.org/woodpecker/v2/cli/internal"
 )
 
 var pipelineStartCmd = &cli.Command{
@@ -30,18 +30,18 @@ var pipelineStartCmd = &cli.Command{
 	Usage:     "start a pipeline",
 	ArgsUsage: "<repo-id|repo-full-name> [pipeline]",
 	Action:    pipelineStart,
-	Flags: append(common.GlobalFlags,
+	Flags: []cli.Flag{
 		&cli.StringSliceFlag{
 			Name:    "param",
 			Aliases: []string{"p"},
 			Usage:   "custom parameters to be injected into the step environment. Format: KEY=value",
 		},
-	),
+	},
 }
 
-func pipelineStart(c *cli.Context) (err error) {
+func pipelineStart(ctx context.Context, c *cli.Command) (err error) {
 	repoIDOrFullName := c.Args().First()
-	client, err := internal.NewClient(c)
+	client, err := internal.NewClient(ctx, c)
 	if err != nil {
 		return err
 	}

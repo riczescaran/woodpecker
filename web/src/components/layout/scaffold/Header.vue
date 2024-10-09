@@ -25,6 +25,7 @@
         <TextField
           v-if="searchBoxPresent"
           class="w-auto <md:w-full <md:order-3"
+          :aria-label="$t('search')"
           :placeholder="$t('search')"
           :model-value="search"
           @update:model-value="(value: string) => $emit('update:search', value)"
@@ -51,6 +52,7 @@
 </template>
 
 <script setup lang="ts">
+import IconButton from '~/components/atomic/IconButton.vue';
 import TextField from '~/components/form/TextField.vue';
 import Container from '~/components/layout/Container.vue';
 

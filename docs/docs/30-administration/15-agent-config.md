@@ -1,41 +1,29 @@
+---
+toc_max_heading_level: 2
+---
+
 # Agent configuration
 
 Agents are configured by the command line or environment variables. At the minimum you need the following information:
 
-```diff
-# docker-compose.yml
-version: '3'
-
-services:
-  woodpecker-agent:
-    [...]
-    volumes:
-      - woodpecker-agent-config:/etc/woodpecker
-    environment:
-+     - WOODPECKER_SERVER=localhost:9000
-+     - WOODPECKER_AGENT_SECRET="your-shared-secret-goes-here"
+```ini
+WOODPECKER_SERVER=localhost:9000
+WOODPECKER_AGENT_SECRET="your-shared-secret-goes-here"
 ```
 
 The following are automatically set and can be overridden:
 
-- WOODPECKER_HOSTNAME if not set, becomes the OS' hostname
-- WOODPECKER_MAX_WORKFLOWS if not set, defaults to 1
+- `WOODPECKER_HOSTNAME` if not set, becomes the OS' hostname
+- `WOODPECKER_MAX_WORKFLOWS` if not set, defaults to 1
 
 ## Workflows per agent
 
 By default, the maximum workflows that are executed in parallel on an agent is 1. If required, you can add `WOODPECKER_MAX_WORKFLOWS` to increase your parallel processing for an agent.
 
-```diff
-# docker-compose.yml
-version: '3'
-
-services:
-  woodpecker-agent:
-  [...]
-  environment:
-    - WOODPECKER_SERVER=localhost:9000
-    - WOODPECKER_AGENT_SECRET="your-shared-secret-goes-here"
-+   - WOODPECKER_MAX_WORKFLOWS=4
+```ini
+WOODPECKER_SERVER=localhost:9000
+WOODPECKER_AGENT_SECRET="your-shared-secret-goes-here"
+WOODPECKER_MAX_WORKFLOWS=4
 ```
 
 ## Agent registration
@@ -132,11 +120,14 @@ Configures the path of the agent config file.
 
 Configures the number of parallel workflows.
 
-### `WOODPECKER_FILTER_LABELS`
+### `WOODPECKER_AGENT_LABELS`
 
 > Default: empty
 
-Configures labels to filter pipeline pick up. Use a list of key-value pairs like `key=value,second-key=*`. `*` can be used as a wildcard. By default, agents provide three additional labels `platform=os/arch`, `hostname=my-agent` and `repo=*` which can be overwritten if needed. To learn how labels work, check out the [pipeline syntax page](../20-usage/20-workflow-syntax.md#labels).
+Configures custom labels for the agent, to let workflows filter by it.
+Use a list of key-value pairs like `key=value,second-key=*`. `*` can be used as a wildcard.
+By default, agents provide three additional labels `platform=os/arch`, `hostname=my-agent` and `repo=*` which can be overwritten if needed.
+To learn how labels work, check out the [pipeline syntax page](../20-usage/20-workflow-syntax.md#labels).
 
 ### `WOODPECKER_HEALTHCHECK`
 
@@ -190,7 +181,7 @@ See [Kubernetes backend configuration](./22-backends/40-kubernetes.md#configurat
 
 ### `WOODPECKER_BACKEND_LOCAL_*`
 
-See [Local backend configuration](./22-backends/20-local.md#further-configuration)
+See [Local backend configuration](./22-backends/20-local.md#options)
 
 ## Advanced Settings
 

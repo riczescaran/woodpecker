@@ -14,7 +14,7 @@ function HomepageHeader() {
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs/intro">
+          <Link className="button button--lg button--secondary" to="/docs/intro">
             Woodpecker Tutorial - 5min ⏱️
           </Link>
         </div>
@@ -26,7 +26,10 @@ function HomepageHeader() {
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout title={`${siteConfig.title}`} description="Woodpecker is a simple CI engine with great extensibility.">
+    <Layout
+      title={`${siteConfig.title}`}
+      description="Woodpecker is a simple, yet powerful CI/CD engine with great extensibility."
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />

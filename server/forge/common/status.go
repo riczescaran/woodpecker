@@ -21,14 +21,13 @@ import (
 
 	"github.com/rs/zerolog/log"
 
-	"github.com/woodpecker-ci/woodpecker/server"
-	"github.com/woodpecker-ci/woodpecker/server/model"
+	"go.woodpecker-ci.org/woodpecker/v2/server"
+	"go.woodpecker-ci.org/woodpecker/v2/server/model"
 )
 
 func GetPipelineStatusContext(repo *model.Repo, pipeline *model.Pipeline, workflow *model.Workflow) string {
 	event := string(pipeline.Event)
-	switch pipeline.Event {
-	case model.EventPull:
+	if pipeline.Event == model.EventPull {
 		event = "pr"
 	}
 
@@ -38,7 +37,7 @@ func GetPipelineStatusContext(repo *model.Repo, pipeline *model.Pipeline, workfl
 		return ""
 	}
 	var ctx bytes.Buffer
-	err = tmpl.Execute(&ctx, map[string]interface{}{
+	err = tmpl.Execute(&ctx, map[string]any{
 		"context":  server.Config.Server.StatusContext,
 		"event":    event,
 		"workflow": workflow.Name,
@@ -77,7 +76,7 @@ func GetPipelineStatusDescription(status model.StatusValue) string {
 	}
 }
 
-func GetPipelineStatusLink(repo *model.Repo, pipeline *model.Pipeline, workflow *model.Workflow) string {
+func GetPipelineStatusURL(repo *model.Repo, pipeline *model.Pipeline, workflow *model.Workflow) string {
 	if workflow == nil {
 		return fmt.Sprintf("%s/repos/%d/pipeline/%d", server.Config.Server.Host, repo.ID, pipeline.Number)
 	}
